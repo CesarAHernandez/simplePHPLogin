@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <form action="javascript:displayDeposit();" method="post" id="depositSubmit">          
+            <button type="submit" name="Deposit">Deposit</button>          
+          </form>   
+            <script>
+      		    function displayDeposit()
+      		    {  		  
+                document.getElementById('deposit').style.display = 'block';   
+                document.getElementById('depositSubmit').style.display = 'none';
+              }
+      		  </script>
+          
+      		<form action="features.php" method="post" id="deposit">
+            Deposit: <input type="text" name="deposit"><br>    
+            <button type="submit">Submit</button>          
+          </form>  
+            <script>
+           	  document.getElementById('deposit').style.display = 'none';
+            </script>
+              
+              
+          <!--Wiithdra feature -->
+          <form action="javascript:displayWithdraw();" method="post" id="withdrawSubmit">          
+            <button type="submit" name="Withdraw">Withdraw</button>          
+          </form>
+            <script>
+      		    function displayWithdraw()
+      		    {  		  
+                document.getElementById('withdraw').style.display = 'block';   
+                document.getElementById('withdrawSubmit').style.display = 'none';
+            
+              }
+        		</script>          
+          
+          <form action="features.php" method="post" id="withdraw">
+            Withdraw: <input type="text" name="withdraw"><br>          
+            <button type="submit">Submit</button>  
+          </form>  
+            <script>
+           	  document.getElementById('withdraw').style.display = 'none';
+           	  
+            </script>
+          
+          
+          <!--Get Balance feature -->
+          <form action="features.php" method="post">          
+            <button type="submit" name="balance">Get balance</button>          
+          </form>   
+          
+          <!--Logout feature -->
+          <form action="features.php" method="post">          
+            <button type="submit" name="logout" onclick="javascript:reload();">Log out</button>     
+            <script>            
+              function reload() {
+               //parent.document.getElementById("loginframe").src="loginform.php";
+               parent.document.location.reload(true);
+              }
+            </script>
+          </form>
+    </body>
+</html>
